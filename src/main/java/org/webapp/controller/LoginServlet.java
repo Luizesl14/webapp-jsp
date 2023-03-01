@@ -63,6 +63,7 @@ public class LoginServlet extends HttpServlet {
                 out.println("    <body>");
                 out.println("       <h1>Login Correto</h2>");
                 out.println("       <p><a href='"+ req.getContextPath() + "/index.html'>Voltar</p>");
+                out.println("       <p><a href='"+ req.getContextPath() + "/logout'>logout</p>");
                 out.println("    </body>");
                 out.println("</html>");
             }catch (Exception e){

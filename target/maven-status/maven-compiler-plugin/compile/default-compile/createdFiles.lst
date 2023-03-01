@@ -3,5 +3,6 @@ org\webapp\service\LoginService.class
 org\webapp\service\LoginServiceImpl.class
 org\webapp\service\ProdutoServiceImp.class
 org\webapp\controller\LoginServlet.class
+org\webapp\controller\LogoutServlet.class
 org\webapp\model\Produto.class
 org\webapp\service\ProdutoService.class
