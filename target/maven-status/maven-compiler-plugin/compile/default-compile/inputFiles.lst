@@ -1,8 +1,9 @@
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\service\ProdutoService.java
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\controller\LogoutServlet.java
-C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\service\LoginServiceImpl.java
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\model\Produto.java
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\service\LoginService.java
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\controller\LoginServlet.java
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\service\ProdutoServiceImp.java
 C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\controller\ProdutoServlet.java
+C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\service\LoginServiceCookieImpl.java
+C:\Users\luize\Desktop\webapp\src\main\java\org\webapp\service\LoginServiceSessionImpl.java

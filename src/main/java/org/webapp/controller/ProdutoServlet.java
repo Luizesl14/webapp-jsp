@@ -6,10 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.webapp.model.Produto;
-import org.webapp.service.LoginService;
-import org.webapp.service.LoginServiceImpl;
-import org.webapp.service.ProdutoService;
-import org.webapp.service.ProdutoServiceImp;
+import org.webapp.service.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,8 +20,8 @@ public class ProdutoServlet extends HttpServlet {
         ProdutoService service = new ProdutoServiceImp();
         List<Produto> produtos = service.listar();
 
-        LoginService auth =  new LoginServiceImpl();
-        Optional<String> cookieOptional = auth.getUsername(req);
+        LoginService auth =  new LoginServiceSessionImpl();
+        Optional<String> sessionOptional = auth.getUsername(req);
 
         resp.setContentType("text/html; charset=UTF-8");
         try (PrintWriter out = resp.getWriter()) {
@@ -41,7 +38,7 @@ public class ProdutoServlet extends HttpServlet {
             out.println("        <th> Nome </th>");
             out.println("        <th> tipo </th>");
 
-            if(cookieOptional.isPresent()){
+            if(sessionOptional.isPresent()){
                 out.println("        <th> preço </th>");
             }
 
@@ -53,7 +50,7 @@ public class ProdutoServlet extends HttpServlet {
                 out.println("   <td>" + p.getName() + " </td>");
                 out.println("   <td>" + p.getTipo() + " </td>");
 
-                if(cookieOptional.isPresent()){
+                if(sessionOptional.isPresent()){
                     out.println("   <td>" + p.getPrice() + " </td>");
                 }
                 out.println("</tr>");
