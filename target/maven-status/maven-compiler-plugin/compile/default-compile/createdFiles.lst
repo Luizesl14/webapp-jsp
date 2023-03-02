@@ -1,9 +1,13 @@
-org\webapp\controller\ProdutoServlet.class
+org\webapp\controller\VerCarroServlet.class
 org\webapp\service\LoginService.class
 org\webapp\service\ProdutoServiceImp.class
 org\webapp\controller\LoginServlet.class
-org\webapp\controller\LogoutServlet.class
 org\webapp\service\LoginServiceCookieImpl.class
+org\webapp\controller\AddCarroServlet.class
+org\webapp\controller\ProdutoServlet.class
+org\webapp\controller\LogoutServlet.class
 org\webapp\model\Produto.class
 org\webapp\service\LoginServiceSessionImpl.class
 org\webapp\service\ProdutoService.class
+org\webapp\model\Carro.class
+org\webapp\model\ItemCarro.class

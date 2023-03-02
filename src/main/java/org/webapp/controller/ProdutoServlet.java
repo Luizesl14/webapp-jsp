@@ -40,6 +40,7 @@ public class ProdutoServlet extends HttpServlet {
 
             if(sessionOptional.isPresent()){
                 out.println("        <th> preço </th>");
+                out.println("        <th> Add </th>");
             }
 
             out.println("     </tr>");
@@ -52,6 +53,10 @@ public class ProdutoServlet extends HttpServlet {
 
                 if(sessionOptional.isPresent()){
                     out.println("   <td>" + p.getPrice() + " </td>");
+                    out.println("   <td><a href=\""
+                            + req.getContextPath()
+                            + "/add-cart?id="
+                            + p.getId() + "\">Add+</a> </td>");
                 }
                 out.println("</tr>");
             });
