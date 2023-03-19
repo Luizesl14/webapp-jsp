@@ -62,7 +62,7 @@ public class ProdutoServlet extends HttpServlet {
             });
 
             out.println("</table>");
-            out.println("       <p><a href='"+ req.getContextPath() + "/index.html'>Voltar</p>");
+            out.println("       <p><a href='"+ req.getContextPath() + "/home'>Voltar</p>");
             out.println("    </body>");
             out.println("</html>");
 

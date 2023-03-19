@@ -8,10 +8,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/view-cart")
-public class VerCarroServlet extends HttpServlet {
+@WebServlet("/home")
+public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/carro.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }

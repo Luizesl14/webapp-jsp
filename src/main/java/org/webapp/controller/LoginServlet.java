@@ -2,9 +2,11 @@ package org.webapp.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.webapp.service.LoginService;
-import org.webapp.service.LoginServiceCookieImpl;
 import org.webapp.service.LoginServiceSessionImpl;
 
 import java.io.IOException;
@@ -34,7 +36,7 @@ public class LoginServlet extends HttpServlet {
                out.println("    <body>");
                out.println("       <h1> já tem uma session " + sessionOptional + "</h2>");
                out.println("       <h1>Login Correto</h2>");
-               out.println("       <p><a href='"+ req.getContextPath() + "/index.html'>Voltar</p>");
+               out.println("       <p><a href='"+ req.getContextPath() + "/home'>Voltar</p>");
                out.println("       <p><a href='"+ req.getContextPath() + "/logout'>logout</p>");
                out.println("    </body>");
                out.println("</html>");
@@ -64,7 +66,7 @@ public class LoginServlet extends HttpServlet {
                 out.println("    <body>");
                 out.println("       <h1> já tem uma session " + session.getAttribute("username") + "</h2>");
                 out.println("       <h1>Login Correto</h2>");
-                out.println("       <p><a href='"+ req.getContextPath() + "/index.html'>Voltar</p>");
+                out.println("       <p><a href='"+ req.getContextPath() + "/index.jsp'>Voltar</p>");
                 out.println("       <p><a href='"+ req.getContextPath() + "/logout'>logout</p>");
                 out.println("    </body>");
                 out.println("</html>");
